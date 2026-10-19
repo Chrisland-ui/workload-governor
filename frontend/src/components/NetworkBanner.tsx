@@ -1,7 +1,7 @@
 const FAUCET_URL = "https://friendbot.stellar.org";
 
 export default function NetworkBanner() {
-  const network = process.env.NEXT_PUBLIC_STELLAR_NETWORK ?? "testnet";
+  const network = import.meta.env.VITE_STELLAR_NETWORK ?? "testnet";
   const isTestnet = network === "testnet";
 
   return (
